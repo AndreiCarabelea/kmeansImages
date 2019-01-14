@@ -6,6 +6,12 @@ b. You can tutn the images into non color images, so for instance instead of hav
 c. You can also resample the images to a specified value . You specifiy a number between 1 and 99 
 ( for instance 75 means the width and height will 75% of the original size). 
 d. The images contained into the specified folder ( please provide the full path ) would be copied into a folder named Reduced and transformed according to settings 
-( scaled, reduce colors .. )   
+( scaled, reduce colors .. ) 
+
+The script needs: 
+python installed. 
+sklearn, matplotlib, PIL, numpy.  Is adviced to use anaconda distribution and create an enviroment , and install the required packages using conda install ( instead of pip ) . 
+
+Regards Andrei 
   
 
