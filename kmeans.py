@@ -6,7 +6,6 @@ from sklearn.decomposition import IncrementalPCA, PCA
 from os import listdir, mkdir
 from os.path import isfile, join, splitext, exists
 from PIL import Image
-import numpy
 from matplotlib.image import imread
 
 
@@ -20,7 +19,7 @@ DIRECTORY_NAME = input("Directory name ? ")
 N_COLORS = int(input("Number of colors ? "))
 
 cimage = str(input("Coloured image(y/n) ? "))
-RESIZE_PERCENT = float(input("Percent resize")) 
+RESIZE_PERCENT = float(input("Percent resize ? ")) 
 
 GRAY_IMAGE = True
 if  cimage == 'y':
@@ -61,7 +60,7 @@ for file in onlyfiles:
     result = np.reshape(result, (w,h,d))
     plt.imshow(result)
     
-    img = Image.fromarray((result * 255).astype(numpy.uint8))
+    img = Image.fromarray((result * 255).astype(np.uint8))
     if not exists(DIRECTORY_NAME + "\Reduced"):
         mkdir(DIRECTORY_NAME + "\Reduced")
     
